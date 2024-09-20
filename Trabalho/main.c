@@ -6,6 +6,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void CalcularAreaQuadrado() {
+    float lado;
+    printf("Digite o valor do lado do quadrado para calcular a área: ");
+    scanf("%f", &lado);
+
+    float area = lado * lado;
+    printf("Área do quadrado: %.2f\n", area);
+}
+
+void CalcularPerimetroQuadrado() {
+    float lado;
+    printf("Digite o valor do lado do quadrado para calcular o perímetro: ");
+    scanf("%f", &lado);
+
+    float perimetro = 4 * lado;
+    printf("Perímetro do quadrado: %.2f\n", perimetro);
+}
+
 float perimetro()
 {
 
