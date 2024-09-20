@@ -6,7 +6,8 @@ int main()
 {
     setlocale(LC_ALL, "Portuguese");
 
-
+// vamos ver se esta funcionando
+int a, b;
 
     return 0;
 }
