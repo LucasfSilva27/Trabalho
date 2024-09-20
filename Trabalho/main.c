@@ -3,14 +3,19 @@
 #include <locale.h>
 #define PI 3.14
 
-
+float circulo(){
+    float r;
+    printf("Insira o valor do raio\n");
+    scanf("%f",&r);
+    return (PI*(r*r));
+}
 
 int main()
 {
     float a;
     setlocale(LC_ALL, "Portuguese");
 
-    //por em um case para a funcao circulo
+    printf("A área do círculo é: %.2f\n",circulo());
 
 
 
