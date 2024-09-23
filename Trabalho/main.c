@@ -19,11 +19,6 @@ float calcular_area_triangulo(float base, float altura) {
     return (base * altura) / 2;
 }
 
-// Função para calcular o perímetro do triângulo
-float calcular_perimetro_triangulo(float lado1, float lado2, float lado3) {
-    return lado1 + lado2 + lado3;
-}
-
 // Função para calcular o perímetro do pentágono
 float calcular_perimetro_pentagono() {
     float lado, perimetro;
@@ -83,23 +78,17 @@ void calcular_retangulo() {
     scanf("%f", &largura);
     printf("Digite a altura do retângulo: ");
     scanf("%f", &altura);
-
     printf("Área do retângulo: %.2f\n", calcular_ret_area(largura, altura));
-    printf("Perímetro do retângulo: %.2f\n", calcular_ret_perimetro(largura, altura));
 }
 
 // Função para calcular o triângulo
 void calcular_triangulo() {
-    float base, altura, lado1, lado2, lado3;
+    float base, altura;
     printf("Digite a base do triângulo: ");
     scanf("%f", &base);
     printf("Digite a altura do triângulo: ");
     scanf("%f", &altura);
     printf("Área do triângulo: %.2f\n", calcular_area_triangulo(base, altura));
-
-    printf("Digite os três lados do triângulo: ");
-    scanf("%f %f %f", &lado1, &lado2, &lado3);
-    printf("Perímetro do triângulo: %.2f\n", calcular_perimetro_triangulo(lado1, lado2, lado3));
 }
 
 int main() {
