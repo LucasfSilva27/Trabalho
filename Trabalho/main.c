@@ -56,6 +56,26 @@ float calcular_area_circulo() {
     return area;
 }
 
+// Função para calcular a área do quadrado
+float calcular_area_quadrado(float lado) {
+    return lado * lado;
+}
+
+// Função para calcular o perímetro do quadrado
+float calcular_perimetro_quadrado(float lado) {
+    return 4 * lado;
+}
+
+// Função para calcular a área e o perímetro do quadrado
+void calcular_quadrado() {
+    float lado;
+    printf("Digite o lado do quadrado: ");
+    scanf("%f", &lado);
+
+    printf("Área do quadrado: %.2f\n", calcular_area_quadrado(lado));
+    printf("Perímetro do quadrado: %.2f\n", calcular_perimetro_quadrado(lado));
+}
+
 // Função para calcular a área e o perímetro do retângulo
 void calcular_retangulo() {
     float largura, altura;
@@ -68,20 +88,8 @@ void calcular_retangulo() {
     printf("Perímetro do retângulo: %.2f\n", calcular_ret_perimetro(largura, altura));
 }
 
-int main() {
-    setlocale(LC_ALL, "Portuguese");
-
-    // Cálculo da área do círculo
-    calcular_area_circulo();
-
-    // Cálculo da área e perímetro do retângulo
-    calcular_retangulo();
-
-    // Cálculo do perímetro e área do pentágono
-    calcular_perimetro_pentagono();
-    calcular_area_pentagono();
-
-    // Teste para triângulo (como exemplo)
+// Função para calcular o triângulo
+void calcular_triangulo() {
     float base, altura, lado1, lado2, lado3;
     printf("Digite a base do triângulo: ");
     scanf("%f", &base);
@@ -92,6 +100,48 @@ int main() {
     printf("Digite os três lados do triângulo: ");
     scanf("%f %f %f", &lado1, &lado2, &lado3);
     printf("Perímetro do triângulo: %.2f\n", calcular_perimetro_triangulo(lado1, lado2, lado3));
+}
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+    int opcao;
+
+    do {
+        printf("\n========== MENU ==========\n");
+        printf("1. Calcular área e perímetro do Retângulo\n");
+        printf("2. Calcular área e perímetro do Triângulo\n");
+        printf("3. Calcular área e perímetro do Pentágono\n");
+        printf("4. Calcular área do Círculo\n");
+        printf("5. Calcular área e perímetro do Quadrado\n");
+        printf("0. Sair\n");
+        printf("==========================\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcao);
+
+        switch(opcao) {
+            case 1:
+                calcular_retangulo();
+                break;
+            case 2:
+                calcular_triangulo();
+                break;
+            case 3:
+                calcular_perimetro_pentagono();
+                calcular_area_pentagono();
+                break;
+            case 4:
+                calcular_area_circulo();
+                break;
+            case 5:
+                calcular_quadrado();
+                break;
+            case 0:
+                printf("fui\n");
+                break;
+            default:
+                printf("Opção inválida! Tente novamente.\n");
+        }
+    } while (opcao != 0);
 
     return 0;
 }
