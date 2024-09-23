@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+<<<<<<< HEAD
 void CalcularAreaQuadrado() {
     float lado;
     printf("Digite o valor do lado do quadrado para calcular a área: ");
@@ -24,6 +25,34 @@ void CalcularPerimetroQuadrado() {
     printf("Perímetro do quadrado: %.2f\n", perimetro);
 }
 
+=======
+
+#include <stdio.h>
+#include <math.h>
+
+// função para calcular a área do retângulo
+float calcular_ret_area(float largura, float altura){
+    return (largura)*(altura);
+}
+
+// função para calcular o perímetro do retângulo
+float calcular_ret_perimetro(float largura, float altura){
+    return 2*((largura) + (altura));
+}
+
+
+
+float calcular_area(float base, float altura) {
+    return (base * altura) / 2;
+}
+
+
+float calcular_perimetro(float lado1, float lado2, float lado3) {
+    return lado1 + lado2 + lado3;
+}
+
+
+>>>>>>> cb09ad5f67ec6a6160e727eb3d676e5f96c8fccf
 float perimetro()
 {
 
@@ -75,6 +104,23 @@ int main()
 
 
 // vamos ver se esta funcionando
+
+
+//código da Vanessa
+ float largura, altura;
+
+    printf("Digite a largura do retângulo: ");
+    scanf("%f", &largura);
+
+    printf("Digite a altura do retângulo: ");
+    scanf("%f", &altura);
+
+    // Corrigindo os parênteses no printf
+    printf("Área do retângulo: %.2f\n", calcular_ret_area(largura, altura));
+    printf("Perímetro do retângulo: %.2f\n", calcular_ret_perimetro(largura, altura));
+
+
+//fim
 
 
     return 0;
