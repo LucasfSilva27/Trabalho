@@ -1,8 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <math.h>
 #define PI 3.14
 // Divaldo calculo Triangulo
+// função para calcular a área do retângulo
+float calcular_ret_area(float largura, float altura){
+    return (largura)*(altura);
+}
+
+// função para calcular o perímetro do retângulo
+float calcular_ret_perimetro(float largura, float altura){
+    return 2*((largura) + (altura));
+}
+
 float calcular_area(float base, float altura) {
     return (base * altura) / 2;
 }
@@ -21,10 +32,7 @@ float perimetro()
 
    printf("O perimetro do pentagono e %1.f cm",perimetro);
   return perimetro;
-
-
 }
-
 float area()
 {
 
@@ -47,6 +55,22 @@ float circulo(){
     return (PI*(r*r));
 }
 
+
+//código da Vanessa
+ float largura, altura;
+
+    printf("Digite a largura do retângulo: ");
+    scanf("%f", &largura);
+
+    printf("Digite a altura do retângulo: ");
+    scanf("%f", &altura);
+
+    // Corrigindo os parênteses no printf
+    printf("Área do retângulo: %.2f\n", calcular_ret_area(largura, altura));
+    printf("Perímetro do retângulo: %.2f\n", calcular_ret_perimetro(largura, altura));
+
+
+//fim
 int main()
 {
     float a;
