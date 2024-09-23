@@ -14,6 +14,9 @@ float calcular_ret_perimetro(float largura, float altura){
     return 2*((largura) + (altura));
 }
 
+
+
+
 float calcular_area(float base, float altura) {
     return (base * altura) / 2;
 }
@@ -57,7 +60,7 @@ float circulo(){
 
 
 //código da Vanessa
- float largura, altura;
+ float retangulo(float largura,float altura){
 
     printf("Digite a largura do retângulo: ");
     scanf("%f", &largura);
@@ -69,7 +72,7 @@ float circulo(){
     printf("Área do retângulo: %.2f\n", calcular_ret_area(largura, altura));
     printf("Perímetro do retângulo: %.2f\n", calcular_ret_perimetro(largura, altura));
 
-
+ }
 //fim
 int main()
 {
@@ -77,6 +80,7 @@ int main()
     setlocale(LC_ALL, "Portuguese");
 
     printf("A área do círculo é: %.2f\n",circulo());
+
 
 
     return 0;
