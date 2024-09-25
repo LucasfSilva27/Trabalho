@@ -93,8 +93,9 @@ void calcular_triangulo() {
 
 int main() {
     setlocale(LC_ALL, "Portuguese");
-    int opcao;
-
+    int opcao,x,v[40],contador=0;
+    v[contador]=1;
+    contador++;
     do {
         printf("\n========== MENU ==========\n");
         printf("1. Calcular área e perímetro do Retângulo\n");
@@ -106,31 +107,53 @@ int main() {
         printf("==========================\n");
         printf("Escolha uma opção: ");
         scanf("%d", &opcao);
-
+        v[contador]=2;
+        contador++;
         switch(opcao) {
+            v[contador]=3;
+            contador++;
             case 1:
                 calcular_retangulo();
+                v[contador]=4;
+                contador++;
                 break;
             case 2:
                 calcular_triangulo();
+                v[contador]=5;
+                contador++;
                 break;
             case 3:
                 calcular_perimetro_pentagono();
+                v[contador]=6;
+                contador++;
                 calcular_area_pentagono();
+                v[contador]=7;
+                contador++;
                 break;
             case 4:
                 calcular_area_circulo();
+                v[contador]=8;
+                contador++;
                 break;
             case 5:
                 calcular_quadrado();
+                v[contador]=9;
+                contador++;
                 break;
             case 0:
                 printf("fui\n");
+                v[contador]=10;
+                contador++;
                 break;
             default:
                 printf("Opção inválida! Tente novamente.\n");
+                v[contador]=11;
+                contador++;
         }
     } while (opcao != 0);
-
+        v[contador]=12;
+        contador++;
+        for(x=0;x<contador;x++)
+            printf("%d ",v[x]);
     return 0;
 }
