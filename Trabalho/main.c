@@ -137,7 +137,6 @@ int main() {
                 break;
             case 2:
                 calcular_triangulo();
-
                 v[contador]=5;
                 contador++;
                 break;
@@ -148,13 +147,6 @@ int main() {
                 calcular_area_pentagono();
                 v[contador]=7;
                 contador++;
-
-                calcular_perimetro_triangulo();
-                break;
-            case 3:
-                calcular_perimetro_pentagono();
-                printf ("%f",calcular_area_pentagono);
-
                 break;
             case 4:
                 calcular_area_circulo();
